@@ -4,6 +4,7 @@ import SeasonDisplay from './SeasonDisplay';
 import Spinner from './Spinner';
 
 class App extends React.Component {
+    // Similar to a constructor (Thanks to Babel)
     state = {
         lat: null,
         errMessage: ''
