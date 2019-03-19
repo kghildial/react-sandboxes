@@ -1,12 +1,14 @@
+// NOTE: Commented code depicts the previous changes with the fetchUser action creator individually exported and used
+
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { fetchUser } from '../actions';
+// import { fetchUser } from '../actions';
 
 
 class UserHeader extends Component {
-    componentDidMount() {
-        this.props.fetchUser(this.props.userId);
-    }
+    // componentDidMount() {
+    //     this.props.fetchUser(this.props.userId);
+    // }
 
     
     render() {
@@ -26,4 +28,4 @@ const mapStateToProps = (state, ownProps) => {
     return { user: state.users.find(user => user.id === ownProps.userId) };
 };
     
-export default connect(mapStateToProps, { fetchUser })(UserHeader);
+export default connect(mapStateToProps, /*{ fetchUser }*/)(UserHeader);
